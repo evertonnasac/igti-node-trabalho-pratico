@@ -1,0 +1,7 @@
+<div>
+    {{#each animal}}
+        <h2> Nome: {{this.animal_nome}} </h2>
+        <h3> Dono: <a href="/dono/{{this.proprietario_id}}">{{this.dono_nome}}</a>  </h3>
+        <p> Tipo: {{this.tipo}} </p>
+    {{/each}}
+</div>

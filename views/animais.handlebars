@@ -1,0 +1,14 @@
+<div class="animais-list">
+        <table class="animais-table">
+            <tr>
+                <th> NOME</th>
+                <th>TIPO</th>
+            </tr>
+             {{#each animais}}
+            <tr>   
+                <td><a href="animal/{{this.animal_id}}">{{this.nome}}</td>
+                <td> {{this.tipo}} </td>
+                {{/each}}
+            </tr>
+        </table>
+</div>
