@@ -11,12 +11,12 @@ registros no banco de dados SQL.
 Posteriormente, foi implementado a parte visual de forma independente para por em prática meus conhecimentos em front-end. 
 </p>
 <br/>
-Tecnologias utilzadas:
+<h2>Tecnologias utilzadas:</h2>
 <li>Express.JS
 <li>Handlebars
 
 <br/>
-Para baixar o projeto
+<h2>Para baixar o projeto</h2>
 <br/>
 
 ```
