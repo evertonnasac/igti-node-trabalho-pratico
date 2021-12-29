@@ -3,7 +3,7 @@
 <br/>
 <h2>Sobre:</h2>
 <p>
-Inicialmente, o objetivo do trabalho era criar uma API com Node.js e Express para gerenciar um sistemna de pet-shop fictícia com endpoints que realizem a consulta, inserção, atualização e exclusão de 
+Inicialmente, o objetivo do trabalho era criar uma API com Node.js e Express para gerenciar um sistema de pet-shop fictícia com endpoints que realizem a consulta, inserção, atualização e exclusão de 
 registros no banco de dados SQL. 
 </p>
 
