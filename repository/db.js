@@ -8,12 +8,12 @@ import "dotenv/config"
 
 export async function connectPet(){
 
-    //Verifica se existe conexoes abertas para retorná-la 
+    //Verificando se existe conexoes abertas para retorna-las 
     if(global.connection){
         return global.connection.connect()
     }
 
-    //Cria um novo pool de conexoes caso não exista nenhum e o retorna
+    //Criando um novo pool de conexoes caso nao existam nenhuma aberta
     const pool = new pg.Pool({
         connectionString: process.env.DBCONNECT
     })

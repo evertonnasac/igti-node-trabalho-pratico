@@ -14,9 +14,10 @@ Posteriormente, foi implementado a parte visual de forma independente para por e
 <h2>Tecnologias utilzadas:</h2>
 <li>Express.JS
 <li>Handlebars
+<li>Elephant SQL - https://www.elephantsql.com/
 
 <br/>
-<h2>Para baixar o projeto</h2>
+<h2>Para baixar o projeto:</h2>
 <br/>
 
 ```
@@ -27,10 +28,17 @@ Instale as dependências
 $ npm install
 
 Entre no diretório:
-$ cd PETT-APP
+$ cd igti-node-trabalho-pratico
+
+Configure as variáveis de ambiente de acordo com o arquivo .env_sample
 
 Execute o projeto
 $ node app.js
+
+Acesse os endpoints:
+localhost:porta/animal
+localhost:porta/dono
+
 ```
 
 

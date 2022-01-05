@@ -2,6 +2,7 @@ import express from "express"
 import {donoRoute} from "./routes/dono-route.js"
 import {animalRoute} from "./routes/animal-route.js"
 import exphbr from "express-handlebars"
+import "dotenv/config"
 
 
 const app = express()
@@ -20,5 +21,5 @@ app.set("view engine", "handlebars")
 app.use(express.static("public"))
 
 
-app.listen(3000, () => console.log("Server Started") )
+app.listen(process.env.PORT, () => console.log("Server Started on port 3000") )
 export {app}
