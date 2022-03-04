@@ -1,6 +1,10 @@
 import donoService from "../services/dono-service.js"
 
 
+function donoForm(req,res){
+    res.render("dono-form")
+}
+
 async function cadastrarDono (req, res){
     try{
         let dono = req.body
@@ -18,7 +22,7 @@ async function atualizarDono(req, res){
         let dono = req.body
         let id = req.params.id
         await donoService.atualizarDono(id, dono)
-        res.send("Atualização realizada com sucesso")
+        res.redirect("/dono")
     }
     catch(err){
         res.send("Não foi possivel concluir a operação")
@@ -50,5 +54,6 @@ export default {
     cadastrarDono,
     buscarDonos,
     atualizarDono,
-    buscarDonoPorId
+    buscarDonoPorId,
+    donoForm
 }

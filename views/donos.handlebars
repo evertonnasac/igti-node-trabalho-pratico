@@ -1,29 +1,17 @@
 
-   <div class="donos-list">
-        <form method="POST" action="/dono">
-            <fieldset>
-                <legend>CADASTRAR NOVO DONO</legend>
-                <label for="name">Nome:</label>
-                <input type="text" name="nome" id="1">
-                <label for="telefone">Telefone</label>
-                <input type="text" name="telefone" id="">
-                <input type="submit" value="OK">
-            </fieldset>
-        </form>
-       
-       <table class="donos-table">
-           <tr>
-               <th>NOME</th>
-               <th>TELEFONE</th>
-           </tr>
-            {{#each donos}}
-           <tr>
-               <td> <a href="dono/{{this.proprietario_id}}"/>{{this.nome}}</td>
-               <td>{{this.telefone}}</td>
-           </tr>
-            {{/each}}
-       </table>
+<table class="donos-table">
+    <tr>
+        <th>NOME</th>
+        <th>TELEFONE</th>
+    </tr>
+    {{#each donos}}
+    <tr>
+        <td> <a href="dono/buscar/{{this.proprietario_id}}"/>{{this.nome}}</td>
+        <td>{{this.telefone}}</td>
+    </tr>
+    {{/each}}
+</table>
 
 
  
-   </div>
+

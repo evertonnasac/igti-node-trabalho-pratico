@@ -1,30 +1,38 @@
-<div class="pg-dono">
-    <div class="container-foto-dono">
-        <div></div>
-        <div></div>
+<div class="dono-profile">
+
+    <div class="dono-form-container">
+        <div class="dono-img">teste</div>
+        <form class="dono-form" action="/dono/{{dono.proprietario_id}}" method="POST">
+            <label for="nome-dono">Nome</label>
+            <input type="text" name="nome" value="{{dono.dono_nome}}"/>
+            <label for="fone-dono">Telefone</label>
+            <input type="phone" name="telefone" value="{{dono.telefone}}"/>
+            <input type="submit" value="EDITAR">
+        </form>
     </div>
-    <h2> {{dono.dono_nome}} </h2>
-    <h3> Telefone: {{dono.telefone}} </h3>
-    <h3>Animais:</h3>
 
-    <ul>
-        {{#each animais}}
-        <li>
-            {{this}} 
-        </li>
-        {{/each}}
-    </ul>
+    <div class="dono-animal-area">
 
-    <form method ="POST" action = "/animal">
-        <fieldset>
-            <legend> CADASTRAR ANIMAL</legend>
-            <label for="nome-animal">Nome do animal</label>
+        <div class="dono-animais-list">
+            <h2>ANIMAIS:</h2>
+            {{#each animais}}
+                <li>{{this}}</li>
+            {{/each}}
+        </div>
+        
+        
+        <form method ="POST" action = "/animal">
+            <h3>Adicionar novo animal:</h3>
+            <label for="nome">Nome do animal:</label>
             <input type="text" name="nome">
-            <label for="tipo-animal">Tipo animal</label>
-            <input type="text" name="tipo">
+            <label for="tipo">Tipo do animal:</label>
+            <select name="tipo">
+                <option value="cachorro">CACHORRO</option>
+                <option value="gato">GATO</option>
+            </select>
             <input type="hidden" name="proprietario_id" value="{{dono.proprietario_id}}">
-            <input type="submit" value="OK">
-        </fieldset>
-    </form>
-    
+            <input type="submit" value="ADICIONAR">
+        </form>
+    </div>
+   
 </div>

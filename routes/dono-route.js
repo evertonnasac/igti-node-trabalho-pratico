@@ -6,6 +6,7 @@ const donoRoute = express.Router()
 donoRoute.post("/", donoController.cadastrarDono )
 donoRoute.get("/", donoController.buscarDonos)
 donoRoute.post("/:id", donoController.atualizarDono)
-donoRoute.get("/:id", donoController.buscarDonoPorId)
+donoRoute.get("/buscar/:id", donoController.buscarDonoPorId)
+donoRoute.get("/cadastrar", donoController.donoForm)
 
 export {donoRoute}

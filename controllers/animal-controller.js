@@ -10,7 +10,7 @@ async function cadastrarAnimal (req, res){
    try{
        let animal = req.body
        await animalService.cadastrarAnimal(animal)
-       res.redirect(`/dono/${animal.proprietario_id}`)
+       res.redirect(`/dono/buscar/${animal.proprietario_id}`)
    }
    catch(err){
        res.send(`Não foi possivel realizar o cadastro ${err.message}`)
@@ -23,7 +23,6 @@ async function atualizarAnimal(req, res){
         let animal = req.body
         let id = req.params.id
         animal = await animalService.atualizarAnimal(id, animal)
-        console.log(animal)
         res.send(`Atualizado com succeso -- ${animal}`)  
     }
     catch(err){
@@ -46,6 +45,7 @@ async function buscarAnimalPorId(req,res){
         let id = req.params.id
         let animal = await animalService.buscarAnimalPorId(id)
         res.render("animal-id", {animal})
+        console.log(animal)
     }
     catch(err){
         res.send(err.message)
