@@ -7,5 +7,6 @@ animalRoute.post("/", animalController.cadastrarAnimal)
 animalRoute.post("/:id", animalController.atualizarAnimal)
 animalRoute.get("/", animalController.buscarAnimais )
 animalRoute.get("/:id", animalController.buscarAnimalPorId)
+animalRoute.post("/delete/:id",animalController.deletarAnimal)
 
 export  {animalRoute}

@@ -8,10 +8,15 @@
 
 
 a{
-    text-decoration: none;
     color: #000;
 
 }
+
+.menu  a{
+    text-decoration: none;
+}
+
+
 
 input, select{
     width: 100%;
@@ -25,6 +30,7 @@ form{
     
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 form > h3{
@@ -67,6 +73,7 @@ a:hover{
 }
 
 
+
 .link-animal{
     display: block;
     width: 100px;
@@ -84,8 +91,8 @@ a:hover{
     margin: 0 auto;
     width:75%;
     text-align: center;
-    border: 2px solid;
-    margin-bottom: 5px;
+   
+ 
    
 }
 
@@ -116,7 +123,15 @@ a:hover{
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 320px;
 }
+
+
+.dono-form-cadastrar, .animal-form, .animal-form-container {
+    margin: 0 auto;
+    width: 320px;
+}
+
 
 .dono-animal-area{
     display: flex;
@@ -125,18 +140,24 @@ a:hover{
 }
 
 
-.dono-img, .animal-img{
+.img-width{
     border-radius: 100%;
-    width: 200px;
-    height: 200px;
-    background-color: rgb(228, 152, 152);
+    width: 250px;
+    height: 250px;
+    background-size: contain;
     
 }
 
-.dono-form-cadastrar, .animal-form{
-    margin: 0 auto;
-    width: 320px;
+.dono-img{
+    background-image: url("https://cdn-icons-png.flaticon.com/512/1256/1256650.png?w=740");
 }
+
+.animal-img{
+    background-image: url("https://img.freepik.com/vetores-gratis/colecao-bichinhos-fofos_1196-45.jpg?w=740");
+    
+}
+
+
 
 
 

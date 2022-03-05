@@ -8,7 +8,6 @@ function donoForm(req,res){
 async function cadastrarDono (req, res){
     try{
         let dono = req.body
-        console.log(dono)
         await donoService.cadastrarDono(dono) 
         res.redirect("/dono")
     }
@@ -50,10 +49,27 @@ async function buscarDonoPorId(req, res){
     }
 }
 
+async function deleteDono(req, res){
+    try{
+        let id =  req.params.id
+        let resp =  await donoService.deleteDono(id)
+        if(resp === false){
+            res.send("Exclua primeiro os pets deste dono")
+            return
+        }
+        res.redirect("/dono")
+       
+    }
+    catch(err){
+        res.send(err.message)
+    }
+}
+
 export default {
     cadastrarDono,
     buscarDonos,
     atualizarDono,
     buscarDonoPorId,
-    donoForm
+    donoForm,
+    deleteDono
 }

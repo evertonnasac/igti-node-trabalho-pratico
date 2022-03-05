@@ -1,13 +1,17 @@
 
 {{#each animal}}
     <div class="animal-form-container">
-        <div class="animal-img"></div>
+        <div class="animal-img img-width"></div>
         <form class="animal-form" action="/animal/{{this.animal_id}}" method="POST">
             <label for="nome">Nome:</label>
             <input type="text" name="nome" value="{{this.animal_nome}}"/>
             <label for="tipo">Tipo:</label>
             <input type="text" name="tipo" value="{{this.tipo}}"/>
             <input type="submit" value="EDITAR">
+        </form>
+        <form action="/animal/delete/{{this.animal_id}}" method="POST">
+            <input type="submit" value="EXCLUIR"/>
+            <input type="hidden" name = "proprietario_id" value="{{this.proprietario_id}}">
         </form>
         <h3>Dono:<a href="/dono/buscar/{{this.proprietario_id}}">{{this.dono_nome}}</a>  </h3>
     </div>

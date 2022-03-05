@@ -8,5 +8,7 @@ donoRoute.get("/", donoController.buscarDonos)
 donoRoute.post("/:id", donoController.atualizarDono)
 donoRoute.get("/buscar/:id", donoController.buscarDonoPorId)
 donoRoute.get("/cadastrar", donoController.donoForm)
+donoRoute.post("/delete/:id", donoController.deleteDono)
+
 
 export {donoRoute}

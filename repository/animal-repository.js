@@ -72,10 +72,26 @@ async function buscarAnimalPorId (id){
     }
 }
 
+async function deletarAnimal(id){
+    const conn = await connectPet()
+    try{
+        const sql = "DELETE FROM animais WHERE animal_id = $1"
+        await conn.query(sql, [id])
+        return true
+    }
+    catch(err){
+        throw err
+    }
+    finally{
+        conn.release()
+    }
+}
+
 
 export default {
     cadastrarAnimal,
     atualizarAnimal,
     buscarAnimais,
-    buscarAnimalPorId
+    buscarAnimalPorId, 
+    deletarAnimal
 }

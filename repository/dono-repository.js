@@ -72,6 +72,18 @@ async function atualizarDono(id, dono){
     }
 }
 
+async function deleteDono(id){
+    const conn = await connectPet()
+    try{
+        const sql = "DELETE FROM proprietarios WHERE proprietario_id = $1"
+        await conn.query(sql, [id])
+        return true
+    }
+    catch(err){
+        throw err
+    }
+}
+
 
 
 
@@ -79,5 +91,6 @@ export default {
     cadastrarDono,
     buscarDonos,
     buscarDonoPorId,
-    atualizarDono
+    atualizarDono,
+    deleteDono
 }

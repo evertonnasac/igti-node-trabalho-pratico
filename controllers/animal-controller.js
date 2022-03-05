@@ -45,7 +45,17 @@ async function buscarAnimalPorId(req,res){
         let id = req.params.id
         let animal = await animalService.buscarAnimalPorId(id)
         res.render("animal-id", {animal})
-        console.log(animal)
+    }
+    catch(err){
+        res.send(err.message)
+    }
+}
+
+async function deletarAnimal(req, res,){
+    try{
+        let id = req.params.id
+        await animalService.deletarAnimal(id)
+        res.redirect("/animal")
     }
     catch(err){
         res.send(err.message)
@@ -56,6 +66,7 @@ export default {
     cadastrarAnimal,
     atualizarAnimal,
     buscarAnimais,
-    buscarAnimalPorId
+    buscarAnimalPorId,
+    deletarAnimal
 
 }

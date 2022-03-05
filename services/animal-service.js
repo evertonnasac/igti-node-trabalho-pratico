@@ -19,9 +19,16 @@ async function buscarAnimalPorId(id){
     return await animalRepository.buscarAnimalPorId(id)
 }
 
+async function deletarAnimal(id){
+    return await animalRepository.deletarAnimal(id)
+}
+
+
+
 export default {
     cadastrarAnimal,
     atualizarAnimal,
     buscarAnimais,
-    buscarAnimalPorId
+    buscarAnimalPorId,
+    deletarAnimal,
 }
