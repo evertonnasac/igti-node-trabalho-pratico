@@ -12,9 +12,11 @@ Posteriormente, foi implementado a parte visual de forma independente para por e
 </p>
 <br/>
 <h2>Tecnologias utilzadas:</h2>
+<li>Node
 <li>Express.JS
 <li>Handlebars
 <li>Elephant SQL - https://www.elephantsql.com/
+<li>HTML/CSS
 
 <br/>
 <h2>Para baixar o projeto:</h2>
@@ -35,7 +37,7 @@ Configure as variáveis de ambiente de acordo com o arquivo .env_sample
 Execute o projeto
 $ node app.js
 
-Acesse os endpoints:
+Acesse as url:
 localhost:porta/animal
 localhost:porta/dono
 
